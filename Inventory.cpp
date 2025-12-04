@@ -28,7 +28,7 @@ void Inventory::fillInventory() {
 
         std::getline(ss, item.name, ','); 
         std::getline(ss, temp, ',');
-        item.stock = std::stoi(temp);
+        item.stock = std::stoi(temp);  //La función stoi lo que hace es convertir texto(string) a int para leerlo
 
         inventory.push_back(item);
     }

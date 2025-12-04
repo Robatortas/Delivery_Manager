@@ -6,6 +6,9 @@ class Item {
         bool isAvailable();
         void takeStock(int amount);
         void addStock(int amount);
+        void findItemInInventory(std::string name);
+        std::string getName();
+        void getStock();
     private:
         std::string name;
         int stock; // The amount of units available

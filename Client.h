@@ -13,6 +13,5 @@ class Client {
     private:
         std::string name;
         std::string location;
-        Order* order;
         std::vector<Item> itemList;
 };

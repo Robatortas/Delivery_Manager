@@ -1,15 +1,18 @@
 #pragma once
 #include <vector>
-#include "Order.h"
+#include "Item.h"
+
+class Order;
 
 class Client {
     public:
         Client(std::string name, std::string location);
-        void setOrder(Order order);
-        Order getOrder();
+        void setOrder(Order& order);
+        Order getOrder() const;
+        void setLocation();
     private:
         std::string name;
         std::string location;
-        Order order;
-        std::vector itemList;
-}
+        Order* order;
+        std::vector<Item> itemList;
+};

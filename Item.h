@@ -2,6 +2,7 @@
 
 class Item {
     public:
+        Item();
         Item(std::string name);
         bool isAvailable();
         void takeStock(int amount);
@@ -9,7 +10,7 @@ class Item {
         bool isItemInInventory(std::string name);
         std::string getName();
         void getStock(std::string name);
-    private:
         std::string name;
+        int price;
         int stock; // The amount of units available
 };

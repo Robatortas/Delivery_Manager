@@ -7,6 +7,12 @@
 // TODO: Add functionality to convert all data to a .csv file to serve as a database
 int main() {
     Inventory inv;
+    
+    std::cout << "INVENTORY LIST: " << std::endl;
+    for(int i = 0; i < inv.getInventoryList().size(); i++) {
+        std::cout << "NAME: " << inv.getInventoryList()[i].name << " | STOCK: " << inv.getInventoryList()[i].stock << std::endl;
+    }
+
     Driver driver("John Doe", 001);
 
     std::ofstream file;

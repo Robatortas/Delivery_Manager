@@ -2,6 +2,8 @@
 #include <fstream>
 #include "Item.h"
 
+Item::Item() {}
+
 Item::Item(std::string name) : name(name) {}
 
 std::string Item::getName() {return this->name;}

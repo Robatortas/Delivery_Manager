@@ -2,6 +2,8 @@
 #include "Driver.h"
 #include "Vehicle.h"
 
+Driver::Driver() {}
+
 Driver::Driver(std::string name, int id) : name(name), id(id) {}
 
 // Assigns the vehicle that will be designated to the driver

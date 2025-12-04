@@ -6,9 +6,12 @@ class Order;
 
 class Client {
     public:
+        Client();
         Client(std::string name, std::string location);
         void setOrder(Order& order);
         Order getOrder() const;
+        std::string getName();
+        void setName(std::string name);
         void setLocation();
     private:
         std::string name;

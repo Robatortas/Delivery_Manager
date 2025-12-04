@@ -8,13 +8,14 @@ class Client;
 
 class Order {
     public:
-        Order(Client& client, Driver& driver, std::string location, int status);
+        Order();
+        Order(Client& client, Driver& driver, Item& item, std::string location, int status);
         void addItem(Item& item, int quantity);
         void fillOrderList();
-    private:
+        std::vector<Order> orders;
         Client client;
         Driver driver;
         std::string location;
+        Item item;
         int status; // 0=posted, 1=underway, 2=delivered
-        std::vector<Order> orders;
 };

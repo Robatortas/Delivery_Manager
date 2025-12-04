@@ -1,12 +1,12 @@
 #include <iostream>
 #include <fstream>
 #include "Driver.h"
+#include "Inventory.h"
 
 // TODO: Add .csv file containing client's orders with their respective items
 // TODO: Add functionality to convert all data to a .csv file to serve as a database
 int main() {
     Inventory inv;
-    inv.getInventory();
     Driver driver("John Doe", 001);
 
     std::ofstream file;

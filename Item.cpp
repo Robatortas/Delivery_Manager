@@ -12,10 +12,10 @@ bool Item::isAvailable() {
 }
 
 // Finds the item in the inventory through a name based queried search
-void Item::findItemInInventory(std::string name) {
+bool Item::isItemInInventory(std::string name) {
     std::ifstream file;
     file.open("Inventario_C.csv", std::ios_base::in);
-    if(!file.is_open()) std::cerr << "Unable to open file !"; return;
+    if(!file.is_open()) std::cerr << "Unable to open file !"; return false;
     std::string line = "";
     int lineCount = 0;
 
@@ -23,17 +23,18 @@ void Item::findItemInInventory(std::string name) {
         lineCount++;
         if(line.find(name) != std::string::npos) {
             std::cout << "Line: " << line << " contains " << name << std::endl;
-        }
+            return true;
+        } else return false;
     }
 
-    return;
+    return false;
 }
 
-void Item::getStock() {
+void Item::getStock(std::string name) {
     std::ofstream file;
     file.open("Inventario_C.csv", std::ios_base::out);
     if(!file.is_open()) std::cerr << "Unable to open file !"; return;
-    // if()
+    if(isItemInInventory(name)) std::cout << "IT WORKS !";
 }
 
 // Take a certain amount of items from the stock if supported

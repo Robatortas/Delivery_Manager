@@ -2,6 +2,7 @@
 #include "Item.h"
 #include "Driver.h"
 #include "Client.h"
+#include <vector>
 
 class Client;
 
@@ -9,9 +10,11 @@ class Order {
     public:
         Order(Client& client, Driver& driver, std::string location, int status);
         void addItem(Item& item, int quantity);
+        void fillOrderList();
     private:
         Client client;
         Driver driver;
         std::string location;
         int status; // 0=posted, 1=underway, 2=delivered
+        std::vector<Order> orders;
 };

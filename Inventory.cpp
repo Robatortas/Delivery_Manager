@@ -6,16 +6,16 @@
 Inventory::Inventory() {}
 
 // Function to read the Inventario_C.csv file and fill the vector inventory variable
-void fillInventory() {
+void Inventory::fillInventory() {
     
 }
 
 // 
-void addToInventory() {
+void Inventory::addToInventory() {
 
 }
 
 // Take a certain quantity from inventory
-void takeFromInventory(int quantity) {
+void Inventory::takeFromInventory(int quantity) {
 
 }

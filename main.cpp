@@ -13,29 +13,43 @@ void invAdmin() {
     }
 }
 
+
+
 void orderAdmin() {
     int sel = 0;
     Order order;
     while(sel != -1) {
         sel = 0;
-        std::cout << "\t\tOrders Administration Menu:" <<
+        std::cout << "\n\n\t\tOrders Administration Menu:" <<
         "\n\t1. Check Orders" <<
-        "\n\t2. Change Order Status // UNAVAILABLE" <<
+        "\n\t2. Change Order Status" <<
         "\n\t3. Back\n\n";
         std::cin >> sel;
         switch(sel) {
             case 1: {
-                
                 std::cout << "ORDERS LIST: " << std::endl;
                 for(int i = 0; i < order.orders.size(); i++) {
-                    std::cout << "CLIENT NAME: " << order.orders[i].client.getName() << " | ITEM: " << order.orders[i].item.getName() << " | LOCATION: " << order.orders[i].location << " | STATUS: " << order.orders[i].status << std::endl;
+                    std::cout << "[" << i << "] CLIENT NAME: " << order.orders[i].client.getName() << "\n\tITEM: " << order.orders[i].item.getName() << "\n\tLOCATION: " << order.orders[i].location << "\n\tSTATUS: " << order.orders[i].getStatus() << std::endl;
                 }
+                std::cout << "- - - - - - - -";
             } break;
-            case 2: orderAdmin();
-            break;
+            case 2: {
+                std::cout << "Select an order by its index: ";
+                int index = 0;
+                std::cin >> index;
+                std::cout << "(0=posted, 1=underway, 2=delivered)\nChange status: ";
+                int status;
+                std::cin >> status;
+                std::cout << "ORDERS SIZE:" << order.orders.size();
+
+                order.findOrderWithIndex(index).changeOrderParams(status, index);
+                std::cout << "Order " << index << " changed to " << order.findOrderWithIndex(index).getStatus();
+
+            } break;
             case 3: return;
             break;
             case 4: sel = -1;
+            break;
         }
     }
 }
@@ -71,22 +85,5 @@ void menu() {
 // TODO: Add functionality to convert all data to a .csv file to serve as a database
 int main() {
     menu();
-
-    // Inventory inv;
-    
-    // std::cout << "INVENTORY LIST: " << std::endl;
-    // for(int i = 0; i < inv.getInventoryList().size(); i++) {
-    //     std::cout << "NAME: " << inv.getInventoryList()[i].name << " | STOCK: " << inv.getInventoryList()[i].stock << std::endl;
-    // }
-
-    // Driver driver("John Doe", 001);
-
-
-    // std::string name;
-    // while(file >> name) {
-    //     file >> 
-
-    // }
-
     return 0;
 }

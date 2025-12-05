@@ -12,6 +12,9 @@ class Order {
         Order(Client& client, Driver& driver, Item& item, std::string location, int status);
         void addItem(Item& item, int quantity);
         void fillOrderList();
+        std::string getStatus();
+        void changeOrderParams(int status, int index);
+        Order findOrderWithIndex(int index);
         std::vector<Order> orders;
         Client client;
         Driver driver;

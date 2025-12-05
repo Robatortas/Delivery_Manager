@@ -1,21 +1,21 @@
-Nombre,Productos Ordenados,Ciudad  Proveniente
-Santiago,Sobre de cartas de Pokemon,Hermosillo
-Mateo,Peluche de Pikachu,Hermosillo
-Sebastian,La pokedex,Hermosillo
-Leonardo,Sobre de cartas de Pokemon,Obregon
-Diego,Sobre de cartas de Pokemon,Alamos
-Miguel,Peluche de Eevee,Guaymas
-Angel,La pokedex,La Paz
-Daniel,La pokedex,Guanajuato
-Jose,Peluche de Pikachu,Chihuahua
-Juan,Sobre de cartas de Pokemon,Chihuahua
-Sofia,Peluche de Eevee,La Paz
-Maria,Pelota de Futbol,Monterrey
-Valentina,Pelota de Baloncesto,Hidalgo
-Ximena,Set de Maquillaje,Aguascalientes
-Regina,Crema para la cara,Tamaulipas
-Camila,Bolsa de Mano,Puebla
-Guadalupe,Set de Maquillaje,Torreon
-Andrea,Pelota de Futbol,Hermosillo
-Fernanda,Crema para la cara,Hermosillo
-Constanza,Bolsa de Mano,Aguascalientes
+Nombre,Productos Ordenados,Ciudad  Proveniente, Status
+Santiago,Sobre de cartas de Pokemon,Hermosillo,0
+Mateo,Peluche de Pikachu,Hermosillo,1
+Sebastian,La pokedex,Hermosillo,0
+Leonardo,Sobre de cartas de Pokemon,Obregon,1
+Diego,Sobre de cartas de Pokemon,Alamos,1
+Miguel,Peluche de Eevee,Guaymas,2
+Angel,La pokedex,La Paz,0
+Daniel,La pokedex,Guanajuato,1
+Jose,Peluche de Pikachu,Chihuahua,2
+Juan,Sobre de cartas de Pokemon,Chihuahua,2
+Sofia,Peluche de Eevee,La Paz,1
+Maria,Pelota de Futbol,Monterrey,1
+Valentina,Pelota de Baloncesto,Hidalgo,0
+Ximena,Set de Maquillaje,Aguascalientes,2
+Regina,Crema para la cara,Tamaulipas,1
+Camila,Bolsa de Mano,Puebla,2
+Guadalupe,Set de Maquillaje,Torreon,0
+Andrea,Pelota de Futbol,Hermosillo,0
+Fernanda,Crema para la cara,Hermosillo,2
+Constanza,Bolsa de Mano,Aguascalientes,2

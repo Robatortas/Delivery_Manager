@@ -6,9 +6,7 @@
 #include "Driver.h"
 #include "Item.h"
 
-Order::Order() {
-    fillOrderList();
-}
+Order::Order() {}
 
 Order::Order(Client& client, Driver& driver, Item& item, std::string location, int status) : client(client), driver(driver), item(item), location(location), status(status) {
     
@@ -29,6 +27,7 @@ std::string Order::getStatus() {
 
 void Order::changeOrderParams(int status, int index) {
     this->status = status;
+    index+=1;
     std::ifstream iFile("orders.csv");
 
     if (!iFile.is_open()) {
@@ -58,6 +57,7 @@ void Order::changeOrderParams(int status, int index) {
 
     // Line we want to reach
     std::string tLine = lines[index];
+    std::string header = lines[0];
     std::stringstream ss(tLine);
 
     std::string name, product, city, statusStr; // statusStr will hold the OLD status, but we only need to extract it
@@ -81,9 +81,11 @@ void Order::changeOrderParams(int status, int index) {
     }
 
     // Write lines back to file
+
     int lnCount = 0;
     for (std::string& updatedLine : lines) {
-        if(lnCount != 0) file << updatedLine << "\n";
+        if(lnCount == 0) file << header << "\n";
+        else file << updatedLine << "\n";
         lnCount++;
     }
 
@@ -92,6 +94,7 @@ void Order::changeOrderParams(int status, int index) {
 
 // Fills the orders vector list
 void Order::fillOrderList() {
+    this->orders.clear();
     std::ifstream file("orders.csv");
 
     if (!file.is_open()) {

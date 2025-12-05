@@ -1,3 +1,5 @@
+Nombre,Productos Ordenados,Ciudad  Proveniente, Status
+Santiago,Sobre de cartas de Pokemon,Hermosillo,0
 Mateo,Peluche de Pikachu,Hermosillo,1
 Sebastian,La pokedex,Hermosillo,0
 Leonardo,Sobre de cartas de Pokemon,Obregon,1
@@ -15,5 +17,5 @@ Regina,Crema para la cara,Tamaulipas,1
 Camila,Bolsa de Mano,Puebla,2
 Guadalupe,Set de Maquillaje,Torreon,0
 Andrea,Pelota de Futbol,Hermosillo,2
-Fernanda,Crema para la cara,Hermosillo,1
-Constanza,Bolsa de Mano,Aguascalientes,1
+Fernanda,Crema para la cara,Hermosillo,2
+Constanza,Bolsa de Mano,Aguascalientes,0
